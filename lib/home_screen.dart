@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
+// import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive_second/boxes/boxes.dart';
 import 'package:hive_second/models/notes_model.dart';
@@ -62,19 +62,19 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async{
-          // var box = await Hive.openBox('jonsen');
-          // box.put('name', 'jonsen gaire');
-          // box.put('pro', 'Flutter intern');
-          // box.put('details', {
-          //   'age' : 19,
-          //   'address' : 'Pokhara',
-          //   'College' : 'Informatics College Pokhara'
-          // });
+          var box = await Hive.openBox('jonsen');
+          box.put('name', 'jonsen gaire');
+          box.put('pro', 'Flutter intern');
+          box.put('details', {
+            'age' : 19,
+            'address' : 'Pokhara',
+            'College' : 'Informatics College Pokhara'
+          });
           _showMyDialog();
 
         },
         child: Icon(Icons.add),
-      )
+      ),
     );
     
   }

@@ -4,7 +4,10 @@ import 'package:hive_second/home_screen.dart';
 import 'package:hive_second/models/notes_model.dart';
 import 'package:path_provider/path_provider.dart';
 
+/// This function initializes the Hive database and registers the adapter
+/// for the NotesModel. It then runs the MyApp widget.
 void main() async{
+  
   WidgetsFlutterBinding.ensureInitialized();
   var directory = await getApplicationDocumentsDirectory();
   Hive.init(directory.path);
